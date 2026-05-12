@@ -1,0 +1,94 @@
+/* 기본 레이아웃 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* 기본 버튼 스타일 */
+#setup button {
+    font-size: 20px;
+    padding: 15px 30px;
+    margin: 10px;
+    border-radius: 8px;
+    background-color: #4CAF50; /* 기본 배경색 */
+    color: white;              /* 글자색 */
+    border: none;
+    cursor: pointer;
+}
+
+/* 마우스를 올렸을 때 */
+#setup button:hover {
+    background-color: #45a049; /* hover 시 배경색 변경 */
+    transform: scale(1.1);     /* 버튼 살짝 커지게 */
+}
+
+
+
+#room-info {
+    font-size: 22px;
+    font-weight: bold;
+    padding-top: 10px;
+    text-align: right;
+    margin-right: 20px;
+}
+
+
+/* 메인 레이아웃 */
+main {
+    text-align: center;
+}
+
+/* 게임 화면 */
+#game-display {
+    flex-grow: 1;
+    text-align: center;
+}
+
+/* 타이머 */
+#timer {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* 문제 영역 */
+#question-area {
+    height: 450px;
+    background: #f0f0f0;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #ccc;
+}
+
+/* 정답 입력 */
+#answer-section {
+    margin-top: 15px;
+    text-align: center;
+}
+
+#user-answer {
+    padding: 10px;
+    width: 250px;
+    font-size: 16px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#answer-section button {
+    padding: 10px 15px;
+    margin-left: 10px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#answer-section button:hover {
+    background-color: #45a049;
+}

@@ -2,25 +2,29 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>AI 게임 맞추기</title>
+    <title>게임 맞추기</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
 
-    <header>
-        <h1>GuessGame</h1>
-        <div id="room-info">
-            <span>라운드: 1/5</span>
-        </div>
-    </header>
+    <main>
+        <!-- 문제 갯수 선택 화면 -->
+        <section id="setup">    
+            <h2>문제 갯수를 선택하세요.</h2>
+            <button onclick="startGame(5)">5문제</button>
+            <button onclick="startGame(10)">10문제</button>
+            <button onclick="startGame(15)">15문제</button>
+        </section>
 
-    <hr>
+        <!-- 게임 화면 -->
+        <section id="game-display" style="display:none;">
+            <div id="room-info">
+                <span id="round-info">라운드: 1/5</span>
+            </div>
 
-    <main style="display: flex; gap: 20px;">
-
-        <section id="game-display" style="flex-grow: 1; text-align: center;">
-            <div id="timer" style="font-size: 24px; color: red;">남은 시간: 30초</div>
+            <div id="timer">남은 시간: 7초</div>
             
-            <div id="question-area" style="height: 300px; background: #f0f0f0; margin: 20px 0; display: flex; align-items: center; justify-content: center;">
+            <div id="question-area">
                 <p>[ 여기에 이미지가 표시됩니다 ]</p>
             </div>
 
@@ -29,7 +33,16 @@
                 <button type="button">전송</button>
             </div>
         </section>
+
+        <section id="result-display" style="display:none;">
+            <h2>게임 결과</h2>
+            <p id="final-score">최종 점수: 0점</p>
+
+
     </main>
-    <script src="index.js"></script>
+    
+        <script src="index.js"></script>
+
+
 </body>
 </html>
